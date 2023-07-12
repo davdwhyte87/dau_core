@@ -1,0 +1,86 @@
+
+
+Blockchain core functions
+- create wallet
+- new blocks
+- get all blocks
+- get balance
+- get wallet data +
+- transfer +
+- vault wallet
+wallets should have types, vault wallets are wallets that can have cash limits on them from their creation
+and so a users cannot spend more than a certain limit in a period of time
+
+
+
+Broadcast functionality
+- broadcast new wallet req +
+- broadcast new transfer +
+
+
+Node functionality
+- Routing and discovery
+- Add new node
+- get blockchain data
+
+
+New nodes will have to request for a list of wallets from the blockchain, new nodes will create these new wallets
+and they will have a balance of 0. They will now listen for new transactions and record them.
+
+
+DAu foundation will have a we platform that releases keys. These keys are needed to access the blockchain.
+Users give us their mobile device IP address and we give them a key, we give this key to other nodes letting them know of the new key.
+When a user wants to run a node, they will need that key and IP, their software will check in with other nodes.
+10 keys will be produced every week. and can be increased.
+DAU foundation is the only entity for now with the ability to produce these keys. Nodes will have a secrete hash and we will have a
+key that can add new keys to the network.
+
+
+
+java -cp dau_core.jar App
+
+192.168.43.223
+ echo -e '{"Action":"CREATE_WALLET","CreateWallet":{"WalletName":"Jumoni","Password":"12345","Is
+Vault":true,"VaultLimit":2.0,"VaultOpenDate":"2022-02-07","LimitTime":"m"}}' | nc 192.168.32.1 400
+
+
+ echo -e '{"Action":"CREATE_WALLET","CreateWallet":{"WalletName":"Jumoni","Password":"12345"}}' | nc 192.168.43.223 400
+echo -e '{"Action":"CREATE_WALLET","CreateWallet":{"WalletName":"Jumoni","Password":"12345","WalletAddress":"JUMOKEMYLOVE"}}' | nc 192.168.43.223 400
+
+OAkP7+r67hwKJQtP6a7nOitN5jqrFPg7Epdiy9fcSOY=
+kKHSBQIs7WtzdEzb5OJNu15l+hpKGC0X0P+eWI6uO5Q=
+echo -e '{"Action":"TRANSFER","Transfer":{"SenderAddress":"ifeQZ+qHIESNM26msdKwyPmjwsRepCWLAynkEBduHuI=",
+"ReceiverAddress":"OAkP7+r67hwKJQtP6a7nOitN5jqrFPg7Epdiy9fcSOY=","Amount":1.0}}' | nc 192.168.32.1 400
+
+ 
+#new idea
+We do not need to sync new nodes with the rest of the network
+new transactions can simply be processed on the new server, new server starts with zero data, when new transactions come,
+it records it.
+durring conscensus nodes without the wallet in question will not participate.
+
+
+Syncing will only be about nodes ip addresses
+
+
+License to mine
+-----------------
+Users need to pay to the dau foundation, 10dau and they will be granted license to mine, screening processes may be involved.
+the dau foundation will then add the IP address to the network through a secrete code with a list of all the servers.
+
+#
+DAu foundation should be able to issue new tokens
+DAu foundation should be able to add node to network
+DAu foundation should be able to remove a node from the network
+Nodes should not accept data from unknow nodes
+
+DAU phases
+- development
+- community building
+- love economy development - giving 60 million people 100 DAu each
+- love forever!
+
+//
+node sync - new nodes should have all the wallets data
+node discovery = new node should get all the other nodes ip addresses
+issue new coins

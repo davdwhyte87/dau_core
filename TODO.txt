@@ -1,0 +1,7 @@
+C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin
+
+Features we do not have :
+
+- Multisignatory wallet
+- Users should not be able to transfer money from a vaul wallet until the open date 
+- Users should be able to set the limit on a vaullt (dayly limi, monthly limit, yearly )

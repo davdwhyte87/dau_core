@@ -1,0 +1,15 @@
+{
+    "java.project.referencedLibraries": [
+        // "lib/**/*.jar",
+        "deps/annotations-13.0.jar",
+        "deps/commons-lang3-3.5.jar",
+        "deps/gson-2.8.9.jar",
+        "deps/java-dotenv-5.2.2.jar",
+        "deps/json-simple-1.1.1.jar",
+        "deps/kotlin-stdlib-1.4.0.jar",
+        "deps/kotlin-stdlib-common-1.4.0.jar"
+    ],
+    "java.project.sourcePaths": [
+        "src"
+    ]
+}
